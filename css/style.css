@@ -1,0 +1,320 @@
+#wrapper{
+	font-family:verdana;
+	margin-left:-10px;
+	margin-right:-10px;
+}
+
+.container{
+	width:100%;
+	max-width:1280px;
+	margin:0 auto;
+}
+
+#header{
+	width:100%;
+	height:50px;
+	background:#2E4053;
+	color:white;
+	margin-top:-8px;
+	font-size:18px;
+}
+
+#header p{
+	float:left;
+	margin-top:3px;
+}
+
+#header a{
+	float:right;
+	color:white;
+	text-decoration:none;
+	margin-left:30px;
+	margin-top:3px;
+	
+}
+#header .container a:hover{
+	font-size:22px;
+	transition:all .5s ease;
+}
+
+/*logo styling*/
+#mainHeader{
+	width:100%;
+	height:100px;
+	background:#1C2833;
+	float:left;
+	margin-top:-15px;
+}
+
+#logo {
+	float:left;
+	color:white;
+	font-size:48px;
+	font-weight:bold;
+	margin-left:20px;
+	font-family:cursive;
+	line-height:8px;
+}
+
+/*search area */
+#search{
+	float:left;
+	padding:20px;
+	margin-left:50px;
+}
+.formTxt{
+	width:650px;
+	height:50px;
+	background:white;
+	border:none;
+	border-radius:10px;
+	float:left;
+	padding-left:15px;
+}
+.formBtn{
+	width:100px;
+	height:50px;
+	border-radius:10px;
+	border:none;
+	color:white;
+	background: #E67E22  ;
+	margin-left:-50px;
+	float:left;
+}
+
+/*user menu */
+#login{
+	float:right;
+	margin-top:30px;
+}
+
+/*this is for list styling*/
+#login li{
+	float:left;
+	width:140px;
+	text-align:center;
+	list-style:none;
+	font-size:30px;
+	transition:all .5s ease;
+	
+}
+#login li:hover{
+	font-size:35px;
+	transition:all .5s ease;
+}
+#login li a{
+	color:white;
+	text-decoration:none;
+}
+
+/*navigation bar*/
+#navigation{
+	width:100%;
+	height:35px;
+	background:#17202A;
+	float:left;
+	box-shadow:0px 2px 40px 5px #2E4053;
+}
+
+nav a{
+	line-height:32px;
+	color:white;
+	margin-left:35px;
+	text-decoration:none;
+}
+nav a:hover{
+	color:#E67E22;
+	font-size:22px;
+	transition:all .7s ease;
+}
+
+/*category heading*/
+#heading{
+	width:100%;
+	height:auto;
+	float:left;
+	color:#CA6F1E;
+	font-size:22px;
+}
+#heading h2{
+	line-height:35px;
+	border-left:20px solid #CA6F1E;
+	padding-left:10px;
+}
+
+/*category boxes*/
+.category{
+	width:240px;
+	height:240px;
+	float:left;
+	position:relative;
+	margin-right:15px;
+}
+.category p{
+	width:100%;
+	height:35px;
+	line-height:35px;
+	background:rgba(0,0,0,0.5);
+	color:white;
+	bottom:30px;
+	position:absolute;
+	text-align:center;
+}
+.category:hover p{
+	color:#E67E22;
+}
+
+/*products style*/
+.product{
+	width:235px;
+	height:300px;
+	overflow:hidden;
+	margin:0 18 30 0;
+	position:relative;
+	float:left;
+}
+
+.product img{
+	max-width:100%;
+}
+
+.prod-trans{
+	background:rgba(0,0,0,0.6);
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	position:absolute;
+	opacity:0;
+	transition:all .5s ease;
+}
+
+.product:hover .prod-trans{
+	opacity:1;
+	transition:all .5s ease;
+}
+
+.prod-feature{
+	text-align:center;
+	transition:all .5s ease;
+}
+
+.prod-feature p{
+	color: white;
+	font-weight:bold
+}
+.prod-feature input{
+	width:150px;
+	height:35px;
+	font-size:17px;
+	border-radius:8px;
+}
+
+.product:hover .prod-feature{
+	margin-top:120px;
+	transition:all .5s ease;
+}
+
+
+
+.offer{
+	width:420px;
+	float:left;
+	margin-right:10px;
+}
+.offer:last-child{
+	margin-right:0px;
+}
+.offer img{
+	width:100%;
+	
+}
+
+#footer{
+	width:100%;
+	height:auto;
+	background:#f5f5f5;
+	float:left;
+}
+.footer1{
+	width:25%;
+	float:left;
+}
+
+.footer2{
+	width:20%;
+	float:left;
+	
+}
+
+.footer2 ul li{
+	list-style:none;
+}
+.footer2 ul li a{
+	text-decoration:none;
+	color:black;
+}
+.footer2 ul li a:hover{
+	color:#E67E22;
+	text-decoration:underline;
+	
+}
+.footer3{
+	width:35%;
+	float:left;
+}
+.footerTxt{
+	width:350px;
+	border:none;
+	height:50px;
+	padding:15px;
+	float:left;
+}
+.footerBtn{
+	height:50px;
+	border:none;
+	background:#E67E22;
+	float:left;
+}
+
+.footerP{
+	color:#999;
+	font-style:italic;
+	font-size:15px;
+}
+
+#view img{
+	height:500px;
+	width:500px;
+	float:left;
+	margin:20px;
+	
+}
+#details{
+	float:left;
+	margin-left:50px;
+	margin-top:60px;
+}
+#details p,li{
+	font-family:verdana;
+	font-size:20px;
+	color:#212F3D;
+	font-weight:bold;
+	
+}
+
+#carttable{
+	margin-top:150px;
+	margin-left:30px;
+}
+#carttable table,th,td{
+	border-collapse: collapse;
+	border: 3px solid black;
+	background:#E67E22;
+	padding:8px;
+	font-weight:bold;
+	width:auto;
+	height:auto;
+}
