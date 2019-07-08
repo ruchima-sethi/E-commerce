@@ -1,0 +1,456 @@
+<html>
+<head>
+	<title>AZCart</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	
+	<script type="text/javascript">
+
+	inames=[]
+	iqtyp=[] 
+	iprice=[]
+
+	function addItem1(){
+		inames.push(document.getElementsByClassName("pname")[0].value)
+		iqtyp.push(parseInt(document.getElementsByClassName("pqty")[0].value))      
+		iprice.push(parseInt(document.getElementsByClassName("price")[0].value))
+		
+		displayCart()
+	}
+	
+	function addItem2(){
+		inames.push(document.getElementsByClassName("pname")[1].value)
+		iqtyp.push(parseInt(document.getElementsByClassName("pqty")[1].value))      
+		iprice.push(parseInt(document.getElementsByClassName("price")[1].value))
+		
+		displayCart()
+	}
+	function addItem3(){
+		inames.push(document.getElementsByClassName("pname")[2].value)
+		iqtyp.push(parseInt(document.getElementsByClassName("pqty")[2].value))      
+		iprice.push(parseInt(document.getElementsByClassName("price")[2].value))
+		
+		displayCart()
+	}
+	function addItem4(){
+		inames.push(document.getElementsByClassName("pname")[3].value)
+		iqtyp.push(parseInt(document.getElementsByClassName("pqty")[3].value))      
+		iprice.push(parseInt(document.getElementsByClassName("price")[3].value))
+		
+		displayCart()
+	}
+	function addItem5(){
+		inames.push(document.getElementsByClassName("pname")[4].value)
+		iqtyp.push(parseInt(document.getElementsByClassName("pqty")[4].value))      
+		iprice.push(parseInt(document.getElementsByClassName("price")[4].value))
+		
+		displayCart()
+	}
+	function addItem6(){
+		inames.push(document.getElementsByClassName("pname")[5].value)
+		iqtyp.push(parseInt(document.getElementsByClassName("pqty")[5].value))      
+		iprice.push(parseInt(document.getElementsByClassName("price")[5].value))
+		
+		displayCart()
+	}
+	function addItem7(){
+		inames.push(document.getElementsByClassName("pname")[6].value)
+		iqtyp.push(parseInt(document.getElementsByClassName("pqty")[6].value))      
+		iprice.push(parseInt(document.getElementsByClassName("price")[6].value))
+		
+		displayCart()
+	}
+	function addItem8(){
+		inames.push(document.getElementsByClassName("pname")[7].value)
+		iqtyp.push(parseInt(document.getElementsByClassName("pqty")[7].value))      
+		iprice.push(parseInt(document.getElementsByClassName("price")[7].value))
+		
+		displayCart()
+	}
+	function addItem9(){
+		inames.push(document.getElementsByClassName("pname")[8].value)
+		iqtyp.push(parseInt(document.getElementsByClassName("pqty")[8].value))      
+		iprice.push(parseInt(document.getElementsByClassName("price")[8].value))
+		
+		displayCart()
+	}
+	function addItem10(){
+		inames.push(document.getElementsByClassName("pname")[9].value)
+		iqtyp.push(parseInt(document.getElementsByClassName("pqty")[9].value))      
+		iprice.push(parseInt(document.getElementsByClassName("price")[9].value))
+		
+		displayCart()
+	}
+
+	function displayCart(){
+		cartdata='<table><tr><th>Product Name</th><th>Quantity</th><th>Price per unit in $</th><th>Total</th></tr>';
+		total=0;
+		for(i=0;i<inames.length;i++){
+			total+=iqtyp[i]*iprice[i]
+			cartdata+="<tr><td>"+inames[i]+"</td><td>"+iqtyp[i]+"</td><td>"+iprice[i]+"</td><td>"+iqtyp[i]*iprice[i]+"</td><td><button onclick='delElement("+i+")'>Delete</button></td></tr>"
+		}
+		cartdata+='<tr><td></td><td></td><td></td><td>'+total+ '</td></tr></table>'
+	
+		document.getElementById('carttable').innerHTML=cartdata
+	}
+	
+	function delElement(a){
+		inames.splice(a,1);
+		iqtyp.splice(a,1)
+		iprice.splice(a,1)
+		displayCart()
+	}
+</script>
+	
+	
+</head>
+
+<body>
+	<div id="wrapper">
+			<div id="header">
+				<div class="container">
+					<p>world fastest online shopping place</p>
+					<a href="#">Guest</a>
+					<a href="#">Consumer</a>
+					<a href="#">Download App</a>
+					<a href="#">Help</a>
+				</div>
+			</div>
+			
+			<!--main-header-->
+			<div id="mainHeader">
+				<!--logo-->
+				<div id="logo">
+					<p>AZCart</p>
+				</div>
+				<!--search area-->
+				<div id="search">
+					<form action="">
+						<input class="formTxt" type="text" name="text" placeholder="Search here">
+						<input class="formBtn" type="submit" name="submit" value="SEARCH"></input>
+					</form>
+				</div>
+				<!--login-->
+				<div id="login">
+					<li><a href="#">Cart</a></li>
+					<li><a href="#">Login</a></li>
+				</div>
+			</div>
+		
+		<!--navigation bar-->
+		<div id="navigation">
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="#">New arrivals</a>
+				<a href="#">Deals</a>
+				<a href="#">Electronics</a>
+				<a href="#">Accessories</a>
+				<a href="#">Products</a>
+				<a href="#">Order</a>
+			</nav>
+		</div>
+		
+		<div id="carttable">
+		</div>
+				
+			
+		<!--category-->
+		<div class="container">
+			<div id="heading">
+				<h2>Category</h2>
+			</div>
+			<!--1st category-->
+			<a href="#">
+				<div class="category">
+					<img src="images/category1.jpg" alt="Men Fashion">
+					<p>Men Fashion</p>
+				</div>
+			</a>
+			
+			<!--2nd category-->
+			<a href="#">
+				<div class="category">
+					<img src="images/category2.jpg" alt="Ladies Fashion">
+					<p>Ladies Fashion</p>
+				</div>
+			</a>
+			
+			<!--3rd category-->
+			<a href="#">
+				<div class="category">
+					<img src="images/category3.jpg" alt="Ladies Handbag">
+					<p>Ladies Handbag</p>
+				</div>
+			</a>
+			
+			<!--4th category-->
+			<a href="#">
+				<div class="category">
+					<img src="images/category4.jpg" alt="Watches">
+					<p>Watches</p>
+				</div>
+			</a>
+			
+			<!--5th category-->
+			<a href="#">
+				<div class="category">
+					<img src="images/category5.jpg" alt="Jewellery">
+					<p>Jewellery</p>
+				</div>
+			</a>
+			
+			
+			<div id="heading">
+				<h2>Products</h2>
+			</div>
+				<!--1st product-->
+				<div class="product">
+					<img src="images/pro1.jpg" alt="Ladies sandal" >
+					<div class="prod-trans">
+						<div class="prod-feature">
+							
+							<form>
+								<a href="sandal.html"><input type="button" value="View"></a>
+								<input type="text" class="pname" value="Ladies sandal">
+								<input type="number" class="pqty" value="1">
+								<input type="text" class="price" value="29">
+								<input type="submit" value="Add to cart" onClick="addItem1()">
+							</form>
+						</div>
+					</div>
+				</div>
+				
+				<!--2nd product-->
+				<div class="product">
+					<img src="images/pro2.jpg" alt="Man Blazor">
+					<div class="prod-trans">
+						<div class="prod-feature">
+							
+							<form>
+								<a href="manblazor.html"><input type="button" value="View"></a>
+								<input type="text" class="pname" value="Man Blazor">
+								<input type="number" class="pqty" value="1">
+								<input type="text" class="price" value="50">
+								<input type="submit" value="Add to cart" onClick="addItem2()">
+								
+							</form>
+							
+						</div>
+						
+					</div>
+				</div>
+				
+				<!--3rd product-->
+				<div class="product">
+					<img src="images/pro3.jpg" alt="Ladies suit">
+					<div class="prod-trans">
+						<div class="prod-feature">
+					
+							<form name="addtocart" >
+								<a href="ladiessuit.html"><input type="button" value="View"></a>
+								<input type="text" class="pname" value="Ladies suit">
+								<input type="number" class="pqty" value="1">
+								<input type="text" class="price" value="20">
+								<input type="submit" value="Add to cart" onClick="addItem3()">
+							</form>
+						</div>
+						
+					</div>
+				</div>
+				
+				<!--4th product-->
+				<div class="product">
+					<img src="images/pro4.jpg" alt="mobile phones">
+					<div class="prod-trans">
+						<div class="prod-feature">
+							<form name="addtocart" >
+								<a href="mobile.html"><input type="button" value="View"></a>
+								<input type="text" class="pname" value="Mobile phones">
+								<input type="number" class="pqty" value="1">
+								<input type="text" class="price" value="500">
+								<input type="submit" value="Add to cart" onClick="addItem4()">
+							</form>
+						</div>
+						
+					</div>
+				</div>
+				
+				<!--5th product-->
+				<div class="product">
+					<img src="images/pro5.jpg" alt="LED">
+					<div class="prod-trans">
+						<div class="prod-feature">
+							<form name="addtocart" >
+								<a href="led.html"><input type="button" value="View"></a>
+								<input type="text" class="pname" value="LED">
+								<input type="number" class="pqty" value="1">
+								<input type="text" class="price" value="300">
+								<input type="submit"  value="Add to cart" onClick="addItem5()">
+							</form>
+						</div>
+						
+					</div>
+				</div>
+				
+				<!--6th product-->
+				<div class="product">
+					<img src="images/pro6.jpg" alt="Teddy bear">
+					<div class="prod-trans">
+						<div class="prod-feature">
+							<form name="addtocart" >
+								<a href="teddy.html"><input type="button" value="View"></a>
+								<input type="text" class="pname" value="Teddy Bear">
+								<input type="number" class="pqty" value="1">
+								<input type="text" class="price" value="60">
+								<input type="submit" value="Add to cart" onClick="addItem6()">
+							</form>
+						</div>
+						
+					</div>
+				</div>
+				
+				<!--7th product-->
+				<div class="product">
+					<img src="images/pro7.jpg" alt="Makeup-kit">
+					<div class="prod-trans">
+						<div class="prod-feature">
+							<form name="addtocart" >
+								<a href="makeup.html"><input type="button" value="View"></a>
+								<input type="text" class="pname" value="Makeup-kit">
+								<input type="number" class="pqty" value="1">
+								<input type="text" class="price" value="90">
+								<input type="submit" value="Add to cart" onClick="addItem7()">
+							</form>
+						</div>
+						
+					</div>
+				</div>
+				
+				<!--8th product-->
+				<div class="product">
+					<img src="images/pro8.jpg" alt="Books">
+					<div class="prod-trans">
+						<div class="prod-feature">
+							<form name="addtocart" >
+								<a href="books.html"><input type="button" value="View"></a>
+								<input type="text" class="pname" value="Books">
+								<input type="number" class="pqty" value="1">
+								<input type="text" class="price" value="70">
+								<input type="submit" value="Add to cart" onClick="addItem8()">
+							</form>
+						</div>
+						
+					</div>
+				</div>
+				
+				<!--9th product-->
+				<div class="product">
+					<img src="images/pro9.jpg" alt="Bed">
+					<div class="prod-trans">
+						<div class="prod-feature">
+							<form name="addtocart" >
+								<a href="bed.html"><input type="button" value="View"></a>
+								<input type="text" class="pname" value="Bed">
+								<input type="number" class="pqty" value="1">
+								<input type="text" class="price" value="80">
+								<input type="submit" value="Add to cart" onClick="addItem9()">
+							</form>
+						</div>
+				
+					</div>
+				</div>
+				
+				<!--10th product-->
+				<div class="product">
+					<img src="images/pro10.jpg" alt="Headphone">
+					<div class="prod-trans">
+						<div class="prod-feature">
+							<form name="addtocart" >
+								<a href="headphone.html"><input type="button" value="View"></a>
+								<input type="text" class="pname" value="Headphone">
+								<input type="number" class="pqty" value="1">
+								<input type="text" class="price" value="70">
+								<input type="submit" value="Add to cart" onClick="addItem10()">
+							</form>
+						</div>
+						
+					</div>
+				</div>
+		</div>
+	
+			
+						
+			<div class="container">
+				<div id="heading">
+					<h2>Offer</h2>
+				</div>
+				<!--    offer    -->
+				<div class="offer">
+				<a href="#"><img src="images/offer1.jpg"></a>	
+				</div>
+				
+				<div class="offer">
+				<a href="#"><img src="images/offer2.jpg"></a>	
+				</div>
+				
+				<div class="offer">
+				<a href="#"><img src="images/offer3.png"></a>	
+				</div>
+			</div>
+						
+
+				
+		
+		
+		<div id="footer">
+			<div class="container">
+				<div class="footer1">
+					<h2>About Us</h2>
+					<p>This is the most widely used website in the world.</p>
+				</div>
+				
+				<div class="footer2">
+					<center>
+						<h2>Important links</h2>
+						<ul>
+							<li><a href="#">New Arrivals</a></li>
+							<li><a href="#">Deals</a></li>
+							<li><a href="#">Electronics</a></li>
+							<li><a href="#">Accessories</a></li>
+							<li><a href="#">Products</a></li>
+							<li><a href="#">Order</a></li>
+						</ul>
+					</center>
+				</div>
+				
+				<div class="footer2">
+					<center>
+						<h2>Connect with us</h2>
+						<ul>
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Google+</a></li>
+							<li><a href="#">Youtube</a></li>
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Linkdin</a></li>
+							<li><a href="#">Blogger</a></li>
+							<li><a href="#">Digg</a></li>
+						</ul>
+					</center>
+				</div>
+				
+				<div class="footer3">
+					<center>
+						<h2>Subscribe Us</h2>
+						<input type="text" name="subs" placeholder="Write your e-mail" class="footerTxt">
+						<input type="submit" name="submit_btn" value="Subscribe" class="footerBtn">
+						<p class="footerP">Enter your e-mail id for get notification by us.</p>
+					</center>
+				
+				</div>
+			</div>
+		
+		</div>
+		
+	</div>
+
+</body>
+</html>
